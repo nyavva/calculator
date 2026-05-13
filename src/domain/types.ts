@@ -6,6 +6,14 @@ export type CalculatorState = Readonly<{
     operation: Operator | null;
     awaitingOperand: boolean;
     error: string | null;
-    
 
 }>;
+
+export const INITIAL_STATE: CalculatorState = Object.freeze({
+    display: '0',
+    previous: null,
+    operation: null,
+    awaitingOperand: false,
+    error: null,
+
+});

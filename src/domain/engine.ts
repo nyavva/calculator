@@ -29,11 +29,11 @@ export const inputDigit = (s: CalculatorState, digit:string): CalculatorState =>
     return{...s, display: s.display + digit};
 }
 
-export const inputDecimal =(s:CalculatorState, digit: string):
+export const inputDecimal =(s:CalculatorState):
  CalculatorState =>{
     if (s.error) return s;
     if (s.awaitingOperand) {
-        return {...s, display: digit, awaitingOperand: false};
+        return {...s, display: "0.", awaitingOperand: false};
     }
     if(s.display.includes('.')) return s;
     return {...s, display: s.display + '.'};

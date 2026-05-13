@@ -9,7 +9,11 @@ const round = (n: number): number => {
     return Math.round(n * factor) / factor;
 
 }
-export const applyOperator = (lhs: number, op: Operator, rhs: number): number => {
+export const applyOperator = (
+    lhs: number, 
+    op: Operator, 
+    rhs: number,
+): number => {
     let result: number;
     switch(op){
         case '+':
