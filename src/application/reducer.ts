@@ -14,7 +14,7 @@ export const calculatorReducer = (
         case 'DECIMAL':
             return engine.inputDecimal(state);
         case 'OPERATOR':
-            return engine.inputOperator(state, action.opetator);
+            return engine.inputOperator(state, action.operator);
         case 'EQUALS':
             return engine.evaluate(state);
         case 'CLEAR':
